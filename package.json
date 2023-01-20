@@ -1,5 +1,5 @@
 {
-  "name": "@insx/template",
+  "name": "load-config-ts",
   "description": "Default Template",
   "version": "0.0.1",
   "main": "lib/index.js",
@@ -33,10 +33,13 @@
     "release": "publish"
   },
   "dependencies": {
-    "tslib": "2.4.0"
+    "bundle-require": "^1.3.0"
   },
   "devDependencies": {
-    "@insx/publish": "0.2.0",
+    "tslib": "2.4.0",
+    "@types/require-from-string": "^1.2.0",
+    "esbuild": "*",
+    "@insx/publish": "0.4.1",
     "@speedy-js/eslint-config": "0.1.4",
     "@types/jest": "28.1.7",
     "@types/node": "18.7.6",

@@ -1,0 +1,81 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`loadConfig absolute path 1`] = `
+Object {
+  "data": Object {},
+  "path": undefined,
+}
+`;
+
+exports[`loadConfig config suffix 1`] = `
+Object {
+  "data": Object {
+    "a": 1,
+  },
+  "path": "/<AbsTestRoot>/fixtures/config-suffix/foo.generator.ts",
+}
+`;
+
+exports[`loadConfig custom config 1`] = `
+Object {
+  "data": Object {
+    "a": 1,
+  },
+  "path": "/<AbsTestRoot>/fixtures/custom/foo.config.custom.ts",
+}
+`;
+
+exports[`loadConfig custom config with array 1`] = `
+Object {
+  "data": Object {
+    "a": 1,
+  },
+  "path": "/<AbsTestRoot>/fixtures/custom/foo.config.custom.ts",
+}
+`;
+
+exports[`loadConfig import file 1`] = `
+Object {
+  "data": Object {
+    "input": Object {
+      "a": "b",
+    },
+  },
+  "path": "/<AbsTestRoot>/fixtures/import-file/foo.config.ts",
+}
+`;
+
+exports[`loadConfig js 1`] = `
+Object {
+  "data": Object {
+    "a": 1,
+  },
+  "path": "/<AbsTestRoot>/fixtures/js/foo.config.js",
+}
+`;
+
+exports[`loadConfig not-existed 1`] = `
+Object {
+  "data": Object {},
+  "path": undefined,
+}
+`;
+
+exports[`loadConfig ts 1`] = `
+Object {
+  "data": Object {
+    "a": 1,
+  },
+  "path": "/<AbsTestRoot>/fixtures/ts/foo.config.ts",
+}
+`;
+
+exports[`loadConfig tsconfig target environment was set to \`es5\` 1`] = `
+Object {
+  "data": Object {
+    "a": 1,
+    "b": [Function],
+  },
+  "path": "/<AbsTestRoot>/fixtures/target-es5/foo.config.ts",
+}
+`;

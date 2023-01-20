@@ -1,41 +1,53 @@
-<h1 align="center">@insx/template</h1>
+<h1 align="center">load-config-ts</h1>
 
 <p align="center">
-    A hassle-free TS library template.
+    An out-of-box config loader with TypeScript support.
 </p>
 
 <p align="center">
-    <a href="https://npmjs.com/package/@insx/template"><img src="https://img.shields.io/npm/v/@insx/template.svg?style=flat" alt="NPM version"></a> 
-    <a href="https://npmjs.com/package/@insx/template"><img src="https://img.shields.io/npm/dm/@insx/template.svg?style=flat" alt="NPM downloads"></a> 
-    <a href="https://circleci.com/gh/saojs/@insx/template"><img src="https://img.shields.io/circleci/project/saojs/@insx/template/master.svg?style=flat" alt="Build Status"></a> 
+    <a href="https://npmjs.com/package/load-config-ts"><img src="https://img.shields.io/npm/v/load-config-ts.svg?style=flat" alt="NPM version"></a> 
+    <a href="https://npmjs.com/package/load-config-ts"><img src="https://img.shields.io/npm/dm/load-config-ts.svg?style=flat" alt="NPM downloads"></a> 
+    <a href="https://circleci.com/gh/saojs/load-config-ts"><img src="https://img.shields.io/circleci/project/saojs/load-config-ts/master.svg?style=flat" alt="Build Status"></a> 
 </p>
 
-## Quick Start
-
-1. Click "Use this template" at this repository.
-2. Rename all `@insx/template` to your package name.
-3. Commands:
+## Install
 
 ```bash
-npm run bootstrap   # install dependencies
-npm run dev         # development both cjs and esm output
-npm run build       # build both cjs and esm
-npm run lint        # lint code
-npm run lint:fix    # fix all code lint errors
-npm run test        # run all tests
-npm run cov         # run all tests and generate coverage report
-npm run release     # release this package
+npm i load-config-ts -S
 ```
 
-## Features
+## Usage
 
-- TypeScript by default.
-- Output both `cjs` and `esm`.
-- Unit test with [jest](https://facebook.github.io/jest/).
-- Format code with [eslint](https://eslint.org/docs).
-- Fix and format code on each commit.
-- Leverage [@insx/publish](https://github.com/insx/publish) for release flow.
+```js
+import { loadConfig } from 'load-config-ts';
+// This load try to load at process.cwd():
+//   - speedy.config.js
+//   - speedy.config.ts
+//   - speedyrc.js
+//   - speedyrc.ts
+const config = loadConfig({
+  configKey: 'speedy',
+});
+```
+
+Custom config path:
+
+```js
+// This will load `speedy.config.test.js` directly:
+const config = loadConfig({
+  cwd: useScene('config-suffix'),
+  configKey: 'speedy',
+  configFile: 'speedy.config.test.js',
+});
+```
+
+## Credits
+
+`load-config-ts` wouldn't exist without the inspirations from following projects:
+
+- [esbuild](https://github.com/evanw/esbuild)
+- [bundle-require](https://github.com/egoist/bundle-require)
 
 ## License
 
-MIT &copy; [INS-X](https://github.com/ins-x)
+MIT &copy; [ULIVZ](https://github.com/sponsors/ulivz)
