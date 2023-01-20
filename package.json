@@ -11,8 +11,7 @@
   },
   "keywords": [
     "workflow",
-    "speedy",
-    "speedy-js",
+    "ulivz",
     "publish",
     "release",
     "npm publish"
@@ -37,7 +36,6 @@
   },
   "devDependencies": {
     "tslib": "2.4.0",
-    "@types/require-from-string": "^1.2.0",
     "esbuild": "*",
     "@insx/publish": "0.4.1",
     "@speedy-js/eslint-config": "0.1.4",
