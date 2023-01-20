@@ -21,23 +21,23 @@ npm i load-config-ts -S
 ```js
 import { loadConfig } from 'load-config-ts';
 // This load try to load at process.cwd():
-//   - speedy.config.js
-//   - speedy.config.ts
-//   - speedyrc.js
-//   - speedyrc.ts
+//   - ulivz.config.js
+//   - ulivz.config.ts
+//   - ulivzrc.js
+//   - ulivzrc.ts
 const config = loadConfig({
-  configKey: 'speedy',
+  configKey: 'ulivz',
 });
 ```
 
 Custom config path:
 
 ```js
-// This will load `speedy.config.test.js` directly:
+// This will load `ulivz.config.test.js` directly:
 const config = loadConfig({
   cwd: useScene('config-suffix'),
-  configKey: 'speedy',
-  configFile: 'speedy.config.test.js',
+  configKey: 'ulivz',
+  configFile: 'ulivz.config.test.js',
 });
 ```
 
