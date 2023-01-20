@@ -1,6 +1,6 @@
 {
   "name": "load-config-ts",
-  "description": "Default Template",
+  "description": "An out-of-the-box config loader with TypeScript support.",
   "version": "0.1.0",
   "main": "lib/index.js",
   "module": "esm/index.js",

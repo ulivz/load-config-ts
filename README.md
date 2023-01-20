@@ -1,7 +1,7 @@
 <h1 align="center">load-config-ts</h1>
 
 <p align="center">
-    An out-of-box config loader with TypeScript support.
+    An out-of-the-box config loader with TypeScript support.
 </p>
 
 <p align="center">
